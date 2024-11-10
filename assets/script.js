@@ -34,7 +34,13 @@ const precioUnitarioFormateado = precioUnitario.toLocaleString('es-ES');
 precioProducto.textContent = '$ ' + precioUnitarioFormateado;
 
 function actualizarPrecioTotal() {
-  const precioTotal = precioUnitario * cantidadActual;
-  const precioFormateado = precioTotal.toLocaleString('es-ES');
-  precioProducto.textContent = '$ ' + precioFormateado;
+    const precioTotal = precioUnitario * cantidadActual;
+    const precioFormateado = precioTotal.toLocaleString('es-ES');
+    precioProducto.classList.add('precio-animacion');
+
+    setTimeout(() => {
+        precioProducto.classList.remove('precio-animacion');
+    }, 300);
+
+    precioProducto.textContent = '$ ' + precioFormateado;
 }
