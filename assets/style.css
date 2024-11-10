@@ -1,0 +1,99 @@
+/********************************************* GENERALES */
+
+:root {
+    --color-primario: #2B0D65;
+    --color-secundario: #4A0F6F;
+    --color-terciario: #650D1F;
+    --color-claro: #ecf0f1;
+    --color-oscuro: #34495e;
+    --color-prueba1: #f1c40f;
+    --color-prueba2: #e74c3c;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+body {
+    height: 100vh;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100%;
+    background-color: var(--color-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/********************************************* GALERIA */
+
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-claro);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.01);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 30rem;
+    border-radius: .8rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.product-name {
+    font-size: 3rem;
+    color: var(--color-oscuro);
+}
+
+.product-price {
+    font-size: 5rem;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+}
+
+.buy-button {
+    padding: 2rem 4rem;
+    background-color: var(--color-terciario);
+    color: var(--color-claro);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: var(--color-secundario);
+}
